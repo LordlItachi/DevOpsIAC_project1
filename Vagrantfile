@@ -10,14 +10,14 @@ Vagrant.configure("2") do |config|
     config.vm.define "web01" do |web01|
         web01.vm.box='ubuntu/focal64'
         web01.vm.hostname="web01"
-        web01.network "private_network", ip:"192.168.33.33"
+        web01.vm.network "private_network", ip:"192.168.33.33"
     end 
 
 ### TOMCAT Vm ###
     config.vm.define "app01" do |app01|
         app01.vm.box="geerlingguy/centos7"
         app01.vm.hostname="app01"
-        app01.network "private_network",ip:"192.168.33.34"
+        app01.vm.network "private_network",ip:"192.168.33.34"
         app01.vm.provider "virtualbox" do |vb|
             vb.memory="1024"
         end
