@@ -8,7 +8,7 @@ Vagrant.configure("2") do |config|
 
 ### NGINIX Vm ###
     config.vm.define "web01" do |web01|
-        web01.vm.box='ubuntu/focalfossa'
+        web01.vm.box='ubuntu/focal24'
         web01.vm.hostname="web01"
         web01.network "private_network", ip:"192.168.33.33"
     end 
